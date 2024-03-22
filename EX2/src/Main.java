@@ -16,6 +16,7 @@ public class Main {
         bomba1.alterarCombustivel(gasolina);
         System.out.println("Tipo da gasolina: " + bomba1.tipoCombustivel);
         System.out.println("Valor: " + bomba1.valorLitro);
+        System.out.println("Quantidade: " + bomba1.quantidadeCombustivel);
 
 
         System.out.println("Qual método você quer utilizar para abastecer?");

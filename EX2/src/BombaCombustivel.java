@@ -1,7 +1,7 @@
 public class BombaCombustivel {
     public java.lang.String tipoCombustivel;
     public double valorLitro;
-    public int quantidadeCombustivel = 300;
+    public int quantidadeCombustivel;
 
     public void abastecerPorValor(double valor) {
         System.out.println("Com o valor de " + valor + " reais foi colocado no seu veículo " + valor/valorLitro + " litros.");
@@ -22,15 +22,19 @@ public class BombaCombustivel {
     public void alterarCombustivel(int novoTipoCombustivel) {
         if (novoTipoCombustivel == 1) {
             this.tipoCombustivel = "Comum";
+            this.quantidadeCombustivel = 400;
             alterarValor(4.5);
         } else if (novoTipoCombustivel == 2) {
             this.tipoCombustivel = "Aditivada";
+            this.quantidadeCombustivel = 700;
             alterarValor(4.7);
         } else if (novoTipoCombustivel == 3) {
             this.tipoCombustivel = "Etanol";
+            this.quantidadeCombustivel = 200;
             alterarValor(3.7);
         } else if (novoTipoCombustivel == 4) {
             this.tipoCombustivel = "Alcool";
+            this.quantidadeCombustivel = 350;
             alterarValor(3.2);
         }
     }
