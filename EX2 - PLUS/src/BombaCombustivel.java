@@ -38,7 +38,7 @@ public class BombaCombustivel {
             this.quantidadeCombustivel = 700;
             alterarValor(4.7);
         } else if (novoTipoCombustivel == 3) {
-            this.tipoCombustivel = "Etanol";
+            this.tipoCombustivel = "Disesel";
             this.quantidadeCombustivel = 200;
             alterarValor(3.7);
         } else if (novoTipoCombustivel == 4) {

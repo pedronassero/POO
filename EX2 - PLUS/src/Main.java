@@ -7,14 +7,14 @@ public class Main {
     public static void main(String[] args) {
         BombaCombustivel bomba1 = new BombaCombustivel("Comum", 4.5, 400);
         BombaCombustivel bomba2 = new BombaCombustivel("Aditivada", 4.7, 700);
-        BombaCombustivel bomba3 = new BombaCombustivel("Etanol", 3.7, 200);
+        BombaCombustivel bomba3 = new BombaCombustivel("Diesel", 3.7, 200);
         BombaCombustivel bomba4 = new BombaCombustivel("Alcool", 3.2, 350);
         Scanner scanner = new Scanner(in);
 
         System.out.println("Qual tipo de gasolina você deseja?");
         System.out.println("1 - Comum");
         System.out.println("2 - Aditivada");
-        System.out.println("3 - Etanol");
+        System.out.println("3 - Diesel");
         System.out.println("4 - Alcool");
         System.out.print("Sua escolha: ");
         int tipoGasolina = scanner.nextInt();
@@ -68,7 +68,7 @@ public class Main {
         System.out.println("Quantidade de todos os combustíveis: ");
         System.out.println("Comum: " + bomba1.quantidadeCombustivel);
         System.out.println("Aditivada: " + bomba2.quantidadeCombustivel);
-        System.out.println("Etanol: " + bomba3.quantidadeCombustivel);
+        System.out.println("Diesel: " + bomba3.quantidadeCombustivel);
         System.out.println("Alcool: " + bomba4.quantidadeCombustivel);
     }
 }
