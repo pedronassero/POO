@@ -4,14 +4,15 @@ public class BombaCombustivel {
     public int quantidadeCombustivel;
 
     public void abastecerPorValor(double valor) {
+        double quantidadeParaRetirar = valor/valorLitro;
         System.out.println("Com o valor de " + valor + " reais foi colocado no seu veículo " + valor/valorLitro + " litros.");
-        this.quantidadeCombustivel -= valor/valorLitro;
+        alterarQuantidadeCombustivel(quantidadeParaRetirar);
         System.out.println("Restam na bomba " + this.quantidadeCombustivel + " litros.");
     }
 
     public void abastecerPorLitro(int quantidadeLitros) {
         System.out.println("O valor para abastecer seu veículo com " + quantidadeLitros + " litros é de " + quantidadeLitros*valorLitro + " reais.");
-        this.quantidadeCombustivel -= quantidadeLitros;
+        alterarQuantidadeCombustivel(quantidadeLitros);
         System.out.println("Restam na bomba " + this.quantidadeCombustivel + " litros.");
     }
 
@@ -39,7 +40,7 @@ public class BombaCombustivel {
         }
     }
 
-    public void alterarQuantidadeCombustivel(int litros) {
+    public void alterarQuantidadeCombustivel(double litros) {
         this.quantidadeCombustivel -= litros;
     }
 }
