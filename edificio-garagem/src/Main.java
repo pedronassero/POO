@@ -5,6 +5,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean continua = true;
+        float pesoFurgao;
+        float volumeFurgao;
         while (continua) {
             System.out.println("Escreva o tipo do seu veículo");
             System.out.println("- Motocicleta");
@@ -35,7 +37,9 @@ public class Main {
                 scanner.nextLine();
                 if (pesoCarro > 2000) {
                     System.out.println("Seu veículo terá que ser classificado como Furgão devido ao peso dele.");
-                    Furgao furgao = new Furgao("Furgão", pesoCarro);
+                    System.out.println("Qual o volume do seu Furgão em m3?");
+                    volumeFurgao = scanner.nextFloat();
+                    Furgao furgao = new Furgao("Furgão", pesoCarro, volumeFurgao);
                     if (furgao.classificaFurgao()) {
                         System.out.println("Quantas horas você irá ficar com seu Furgão estacionado na garagem?");
                         int horas = scanner.nextInt();
@@ -59,9 +63,11 @@ public class Main {
                 }
             } else if (Objects.equals(choice, "Furgão")) {
                 System.out.println("Qual o peso de seu Furgão?");
-                float pesoFurgao = scanner.nextFloat();
+                pesoFurgao = scanner.nextFloat();
                 scanner.nextLine();
-                Furgao furgao = new Furgao(choice, pesoFurgao);
+                System.out.println("Qual o volume do seu Furgão em m3?");
+                volumeFurgao = scanner.nextFloat();
+                Furgao furgao = new Furgao(choice, pesoFurgao, volumeFurgao);
                 if (furgao.classificaFurgao()) {
                     System.out.println("Quantas horas você irá ficar com seu Furgão estacionado na garagem?");
                     int horas = scanner.nextInt();

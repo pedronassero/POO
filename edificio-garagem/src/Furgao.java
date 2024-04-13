@@ -1,15 +1,18 @@
 public class Furgao extends Veiculo {
 
-    public Furgao(String tipo, float peso) {
+    private float volume;
+
+    public Furgao(String tipo, float peso, float volume) {
         setTipo(tipo);
         setPeso(peso);
+        this.volume = volume;
     }
 
     public boolean classificaFurgao() {
-        if (getPeso() <= 3000) {
+        if (getPeso() <= 3000 && volume <= 18) {
             setTipo("Furgão não carregado");
             return true;
-        } else if (getPeso() > 3000 && getPeso() <= 6000) {
+        } else if (getPeso() > 3000 && getPeso() <= 6000 && volume <= 18) {
             setTipo("Furgão carregado");
             return true;
         } else {
